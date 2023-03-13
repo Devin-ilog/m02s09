@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className="HeaderContainer">
       <h1>Módulo 2 Semana 9</h1>
-      <p>{userInfo?.name ?? "Sem nome"}</p>
+      <p>{userInfo.name}</p>
     </header>
   );
 }
