@@ -1,9 +1,10 @@
-import { useContext } from "react";
-import UserContext from "../../UserContext";
 import "./Header.css";
 
+import { useContext } from "react";
+import UserInfoContext from "../../UserInfoContext";
+
 function Header() {
-  const userInfo = useContext(UserContext);
+  const [userInfo] = useContext(UserInfoContext);
 
   return (
     <header className="HeaderContainer">

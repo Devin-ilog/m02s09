@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { HomePage } from "./pages/Home";
-import UserContext from "./UserContext";
+
+import UserInfoContext from "./UserInfoContext";
 
 function App() {
-  const [userInfo, setUserInfo] = useState({ name: "Romeu" });
+  const [userInfo, setUserInfo] = useState({ name: "Isaac" });
 
   return (
-    <UserContext.Provider value={userInfo}>
+    <UserInfoContext.Provider value={[userInfo, setUserInfo]}>
       <HomePage />
-    </UserContext.Provider>
+    </UserInfoContext.Provider>
   );
 }
 
