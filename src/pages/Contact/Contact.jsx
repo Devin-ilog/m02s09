@@ -2,7 +2,7 @@ import "./Contact.css";
 
 function ContactPage() {
   return (
-    <main className="HomePageContainer">
+    <main className="ContactPageContainer">
       <h2>Contato</h2>
       <p>Informações de contato</p>
     </main>
