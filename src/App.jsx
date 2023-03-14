@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { PageWrapper } from "./components/PageWrapper";
 import { HomePage } from "./pages/Home";
 import { ContactPage } from "./pages/Contact";
+import { DetailsPage } from "./pages/Details";
 
 import UserInfoContext from "./UserInfoContext";
 
@@ -16,8 +17,10 @@ function App() {
       <Header />
       <PageWrapper>
         <Routes>
+          <Route path="*" element={<div>Não encontrada</div>} />
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/details/:batata" element={<DetailsPage />} />
         </Routes>
       </PageWrapper>
       <Footer />

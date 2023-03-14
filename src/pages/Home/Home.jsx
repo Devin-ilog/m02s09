@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import UserInfoContext from "../../UserInfoContext";
 
 import "./Home.css";
@@ -20,6 +21,14 @@ function HomePage() {
   return (
     <main className="HomePageContainer">
       <h2>Página inicial</h2>
+      <ul>
+        <li>
+          <Link to="/details/sapato">Sapato</Link>
+        </li>
+        <li>
+          <Link to="/details/gato">Gato</Link>
+        </li>
+      </ul>
       <input
         type="text"
         placeholder="Digite seu nome"
