@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { PageWrapper } from "./components/PageWrapper";
 import { HomePage } from "./pages/Home";
 
 import UserInfoContext from "./UserInfoContext";
@@ -8,7 +11,11 @@ function App() {
 
   return (
     <UserInfoContext.Provider value={[userInfo, setUserInfo]}>
-      <HomePage />
+      <Header />
+      <PageWrapper>
+        <HomePage />
+      </PageWrapper>
+      <Footer />
     </UserInfoContext.Provider>
   );
 }
