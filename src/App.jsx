@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { PageWrapper } from "./components/PageWrapper";
 import { HomePage } from "./pages/Home";
+import { ContactPage } from "./pages/Contact";
 
 import UserInfoContext from "./UserInfoContext";
 
@@ -13,7 +15,10 @@ function App() {
     <UserInfoContext.Provider value={[userInfo, setUserInfo]}>
       <Header />
       <PageWrapper>
-        <HomePage />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
       </PageWrapper>
       <Footer />
     </UserInfoContext.Provider>

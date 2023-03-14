@@ -9,7 +9,11 @@ function Header() {
   return (
     <header className="HeaderContainer">
       <h1>Módulo 2 Semana 9</h1>
-      <p>{userInfo?.name ?? "Sem nome"}</p>
+      <p>Olá, {userInfo?.name ?? "Sem nome"}</p>
+      <nav>
+        <a href="/">Início</a>
+        <a href="/contact">Contato</a>
+      </nav>
     </header>
   );
 }
