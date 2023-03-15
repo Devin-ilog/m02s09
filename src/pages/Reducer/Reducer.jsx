@@ -28,7 +28,10 @@ function reducerContador(state, action) {
 
 function ReducerPage() {
   // inicializando um useReducer
-  const [contador, dispatchContador] = useReducer(reducerContador, 0);
+  const [contador, dispatchContador] = useReducer(
+    reducerContador,
+    contadorInitial
+  );
 
   return (
     <main className="ReducerPageContainer">
