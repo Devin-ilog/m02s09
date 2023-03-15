@@ -6,6 +6,7 @@ import "./Details.css";
 function DetailsPage() {
   const params = useParams();
   const { cep } = params;
+
   const [cepInfos, setCepInfos] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();

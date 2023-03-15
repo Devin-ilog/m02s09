@@ -23,10 +23,10 @@ function HomePage() {
       <h2>Página inicial</h2>
       <ul>
         <li>
-          <Link to="/details/sapato">Sapato</Link>
+          <Link to="/details/88034001">CEP: 88034-001</Link>
         </li>
         <li>
-          <Link to="/details/gato">Gato</Link>
+          <Link to="/details/01001000">CEP: 01001-000</Link>
         </li>
       </ul>
       <input
