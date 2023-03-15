@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/details/:batata" element={<DetailsPage />} />
+          <Route path="/details/:cep" element={<DetailsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </PageWrapper>
