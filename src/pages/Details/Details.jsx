@@ -7,13 +7,19 @@ function DetailsPage() {
   const params = useParams();
   const { cep } = params;
   const [cepInfos, setCepInfos] = useState();
+  const [error, setError] = useState();
 
   useEffect(() => {
     if (cep) {
-      axios.get(`https://viacep.com.br/ws/${cep}/json/`).then((response) => {
-        // atualiza estado de informações
-        setCepInfos(response.data);
-      });
+      axios
+        .get(`https://viacep.com.br/ws/${cep}/json/`)
+        .then((response) => {
+          // atualiza estado de informações
+          setCepInfos(response.data);
+        })
+        .catch((e) => {
+          setError(e);
+        });
     }
   }, [cep]);
 
@@ -21,8 +27,13 @@ function DetailsPage() {
     <main className="DetailsPageContainer">
       <h2>Detalhes</h2>
       <p>Informações sobre o CEP {cep}</p>
-      <p>Localidade: {cepInfos?.localidade}</p>
-      <p>Logradouro: {cepInfos?.logradouro}</p>
+      {cepInfos && (
+        <>
+          <p>Localidade: {cepInfos?.localidade ?? "-"}</p>
+          <p>Logradouro: {cepInfos?.logradouro ?? "-"}</p>
+        </>
+      )}
+      {error && <p>Erro ao carregar: {error.message}</p>}
     </main>
   );
 }
