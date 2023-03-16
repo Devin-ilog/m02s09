@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 import "./Reducer.css";
 
 // valor inicial do useReducer

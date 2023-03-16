@@ -1,10 +1,8 @@
+import { useUserInfoContext } from "../../UserInfoContext";
 import "./Footer.css";
 
-import { useContext } from "react";
-import UserInfoContext from "../../UserInfoContext";
-
 function Footer() {
-  const [userInfo] = useContext(UserInfoContext);
+  const [userInfo] = useUserInfoContext();
 
   return (
     <footer className="FooterContainer">
